@@ -37,3 +37,18 @@
     <script src="blog.js"></script>
 </body>
 </html>
+
+
+// blog.js
+
+// Function to display the current date in the footer
+function displayCurrentDate() {
+    const footer = document.querySelector('footer');
+    const currentDate = new Date().toLocaleDateString();
+    const copyrightText = `&copy; ${currentDate} Federico Valverde Blog`;
+    footer.innerHTML = `<p>${copyrightText}</p>`;
+}
+
+// Call the function when the page loads
+window.addEventListener('load', displayCurrentDate);
+
